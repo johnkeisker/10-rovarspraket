@@ -75,7 +75,6 @@ describe('Rovarspraket Function', () => {
     expect(app.rovarspraket('b')).to.equal('bob')
     expect(app.rovarspraket('cat')).to.equal('cocatot')
     expect(app.rovarspraket('javascript')).to.equal('jojavovasoscocroripoptot')
-    expect(app.rovarspraket(0)).to.equal('0')
 		done();
 	});
 

@@ -5,8 +5,14 @@
  * and returns the largest of them. Use the if-then-else construct available in Javascript.
  */
 
-export function max(a, b){
-    // YOUR CODE HERE
+export function max(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+
+
 }
 
 /**
@@ -16,8 +22,14 @@ export function max(a, b){
  * numbers as arguments and returns the largest of them.
  */
 
-export function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+export function maxOfThree(a, b, c) {
+  if (a > b && b > c) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
 }
 
 /**
@@ -27,8 +39,13 @@ export function maxOfThree(a, b, c){
  * and returns true if it is a vowel, false otherwise.
  */
 
-export function isVowel(char){
-    // YOUR CODE HERE
+export function isVowel(char) {
+  var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+  if (vowels.indexOf(char) > -1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -44,7 +61,17 @@ export function isVowel(char){
  */
 
 export function rovarspraket(input) {
-    // YOUR CODE HERE
+  var newInput = "";
+
+  for (var i = 0; i < input.length; i++) {
+    if (!isVowel(input[i]) && input[i] !== " ") {
+      newInput += input[i] + "o" + input[i];
+    } else {
+      newInput += input[i];
+    }
+  }
+  return newInput;
+
 }
 
 /**
@@ -56,10 +83,10 @@ export function rovarspraket(input) {
  * string "books".
  */
 
-export function reverse(str){
-    // YOUR CODE HERE
-}
+export function reverse(str) {
+  return str.split("").reverse().join("");
 
+}
 /**
  * Part 5
  *
@@ -69,8 +96,13 @@ export function reverse(str){
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
-export function findLongestWord(sentence){
-    // YOUR CODE HERE
+export function findLongestWord(sentence) {
+
+
+
+
+
+
 }
 
 /**
@@ -81,6 +113,14 @@ export function findLongestWord(sentence){
  * and false if it isn't.
  */
 
- export function isPalindrome(word) {
-   // YOUR CODE HERE
- }
+export function isPalindrome(word) {
+
+  if (typeof(word) === "string") {
+    if (word === reverse(word)) {
+      return true;
+    }
+  }
+
+  return false;
+
+}
