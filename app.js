@@ -98,10 +98,17 @@ export function reverse(str) {
 
 export function findLongestWord(sentence) {
 
+  sentence = sentence.split(" ");
+  var longestWord = " ";
+  console.log(sentence);
 
-
-
-
+  for (var i = 0; i < sentence.length; i++) {
+    if (sentence[i].length > longestWord.length) {
+      longestWord = sentence[i];
+      console.log(longestWord);
+    }
+  }
+  return longestWord;
 
 }
 
